@@ -8,8 +8,8 @@ if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
 
-fs.readdir(folder, async (err, files) => {
-  return await Promise.all(files.map(async file => {
+fs.readdir(folder, (err, files) => {
+  return Promise.all(files.map(async file => {
     if (file.split('.')[1] == 'CR3') {
       await exiftool.extractJpgFromRaw(`${folder}${file}`, `${dir}${file.split('.')[0]}.jpg`);
     }
