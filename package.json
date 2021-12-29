@@ -1,0 +1,14 @@
+{
+  "name": "cr3-to-jpg",
+  "version": "1.0.0",
+  "description": "Tool for bulk convert ´.CR3´ images to ´JPG´ format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paulo Cardoso",
+  "license": "ISC",
+  "dependencies": {
+    "exiftool-vendored": "^15.9.1"
+  }
+}
