@@ -13,7 +13,7 @@ test.after('cleanup', () => {
 });
 
 test('cr3 to jpg', async t => {
-	t.is(await cr3ToJpg(VALID_TEST_FILE, OUTPUT_PATH), true);
+	t.deepEqual(await cr3ToJpg(VALID_TEST_FILE, OUTPUT_PATH), {success: true, outputPath: OUTPUT_PATH});
 });
 
 test('invalid source file format', t => {
