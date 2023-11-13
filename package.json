@@ -1,20 +1,31 @@
 {
   "name": "cr3-to-jpg",
   "version": "1.0.0",
-  "description": "Tool for bulk convert ´.CR3´ images to ´JPG´ format",
+  "description": "Easy convert your cr3 images to jpg",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo && ava && tsc index.d.ts",
+    "lint:fix": "xo --fix",
+    "generate:tsc": "tsc index.js --declaration --emitDeclarationOnly --allowJs --outDir ."
   },
+  "keywords": [
+    "cr3",
+    "cannon",
+    "cr3-to-jpg"
+  ],
   "author": "Paulo Cardoso",
+  "type": "module",
   "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "typescript": "^5.2.2",
+    "xo": "^0.56.0"
+  },
   "dependencies": {
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "exiftool-vendored": "^15.9.1",
-    "express": "^4.18.2",
-    "express-fileupload": "^1.4.0",
-    "lodash": "^4.17.21",
-    "morgan": "^1.10.0"
+    "exiftool-vendored": "^23.4.0"
   }
 }
