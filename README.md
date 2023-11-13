@@ -14,3 +14,5 @@ import cr3ToJpg from 'cr3-to-jpg'
 console.log(cr3ToJpg('file.cr3', 'destination.jpg')
 //=> true
 ```
+## Unpacked Size
+Less than 5 kB
