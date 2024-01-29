@@ -1,6 +1,6 @@
 {
   "name": "cr3-to-jpg",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Easy convert your cr3 images to jpg",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "type": "module",
   "license": "ISC",
   "files": [
+    "conversors/*",
     "index.js",
     "index.d.ts"
   ],
