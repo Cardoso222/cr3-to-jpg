@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import test from 'ava';
-import {cr3ToJpg} from './index.js';
+import cr3ToJpg from './index.js';
 
 const OUTPUT_PATH = 'fixtures/cr3/output.jpg';
 const VALID_TEST_FILE = 'fixtures/cr3/valid.cr3';
