@@ -11,7 +11,7 @@ The lightweight, lightning-fast .CR3 to .JPG format wizard. Effortlessly harness
 
 import cr3ToJpg from 'cr3-to-jpg'
 
-console.log(cr3ToJpg('file.cr3', 'destination.jpg')
+console.log(cr3ToJpg('file.cr3', 'destination.jpg'))
 //=> {success: true, outputPath: /path/to/file.jpg}
 ```
 ## Unpacked Size
