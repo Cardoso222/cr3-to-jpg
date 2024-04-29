@@ -5,7 +5,7 @@ export default function cr3ToJpg(filePath, outputPath) {
 }
 
 function validateFilePath(filePath) {
-	if (!filePath.toLowerCase.includes('.cr3')) {
+	if (!filePath.toLowerCase().includes('.cr3')) {
 		throw new Error('Invalid source file format');
 	}
 
@@ -13,7 +13,7 @@ function validateFilePath(filePath) {
 }
 
 function validateOutputPath(filePath) {
-	if (!filePath.toLowerCase.includes('.jpg')) {
+	if (!filePath.toLowerCase().includes('.jpg')) {
 		throw new Error('Invalid destination file format');
 	}
 
