@@ -1,21 +1,21 @@
+import path from 'node:path';
 import {cr3Conversor} from './conversors/cr3.js';
 
-export default function cr3ToJpg(filePath, outputPath) {
-	return validateFilePath(filePath) && validateOutputPath(outputPath) && cr3Conversor(filePath, outputPath);
+const SOURCE_EXTENSIONS = new Set(['.cr3']);
+const DESTINATION_EXTENSIONS = new Set(['.jpg', '.jpeg']);
+
+export default async function cr3ToJpg(filePath, outputPath) {
+	validatePath(filePath, SOURCE_EXTENSIONS, 'Invalid source file format');
+	validatePath(outputPath, DESTINATION_EXTENSIONS, 'Invalid destination file format');
+	return cr3Conversor(filePath, outputPath);
 }
 
-function validateFilePath(filePath) {
-	if (!filePath.toLowerCase().includes('.cr3')) {
-		throw new Error('Invalid source file format');
+function validatePath(filePath, allowedExtensions, message) {
+	if (typeof filePath !== 'string' || filePath.length === 0) {
+		throw new TypeError('Expected a file path string');
 	}
 
-	return true;
-}
-
-function validateOutputPath(filePath) {
-	if (!filePath.toLowerCase().includes('.jpg')) {
-		throw new Error('Invalid destination file format');
+	if (!allowedExtensions.has(path.extname(filePath).toLowerCase())) {
+		throw new Error(message);
 	}
-
-	return true;
 }

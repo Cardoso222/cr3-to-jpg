@@ -26,9 +26,6 @@
     "typescript": "^5.2.2",
     "xo": "^0.56.0"
   },
-  "dependencies": {
-    "exiftool-vendored": "^23.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Cardoso222/cr3-to-jpg"
